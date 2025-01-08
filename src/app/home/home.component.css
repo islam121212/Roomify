@@ -1,28 +1,28 @@
 .home-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  height: 100vh;
 }
 
-.grid {
+.rooms-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .room-card {
   position: relative;
+  background-color: #2c2c3c;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.room-image {
+.room-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .user-avatar {
@@ -39,23 +39,23 @@
 .user-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
-.footer-icons {
+.bottom-navigation {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
 
-.icon {
-  font-size: 24px;
+.bottom-navigation button {
+  background: none;
+  border: none;
   color: #fff;
+  font-size: 24px;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.icon:hover {
-  transform: scale(1.1);
+.bottom-navigation button:hover {
+  color: #ffd700;
 }
